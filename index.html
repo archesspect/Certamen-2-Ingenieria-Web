@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Certamen 2 : Ingeniería Web</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap Framework -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+        <link href="css/estilo.css" rel="stylesheet">
+
+        <!-- Jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    </head>
+
+    <body>
+        <div class="container" id="contenedor">
+            <h1> Ficha del Estudiante</h1>
+            <form name="formulario" id="formulario" class="row g-3 needs validation" novalidate>
+
+                <ul id="campos">
+                    <li*>
+                        <!-- Primer Campo : Nombre  -->
+                        <div class="col1">
+                            <label for="nombre" class="form-label">Germán Tabilo
+                                <input type="button" id="botoneditar" value="Editar" onclick="editar()">
+                            </label>
+                        </div>
+                    </li>
+                    <br/>
+                    <li*>
+                        <!-- Segundo campo : RUT -->
+                        <div class="col">
+                            <label for="rut" class="form-label">RUT</label>
+                            <input type="text" class="form-control" id="rut" value="20014818-5" disabled="" required>
+                            <div class="valid-feedback">
+                                Rut ingresado correctamente
+                            </div>
+                            <div class="invalid-feedback">
+                                Ingrese correctamente el RUT
+                            </div>
+                        </div>
+                    </li>
+                    <br/>
+                    <li*>
+                        <!-- Tercer Campo : Telefono -->
+                        <div class="col">
+                            <label for="telefono" class="form-label">Telefono</label>
+                            <input type="tel" class="form-control" id="telefono" value="985636503" disabled="" required>
+                            <div class="valid-feedback">
+                            Telefono ingresado correctamente
+                            </div>
+                            <div class="invalid-feedback">
+                            Porfavor ingrese su número telefónico
+                            </div>
+                        </div>
+                    </li>
+                    <br/>
+                    <li*>
+                        <!-- Cuarto Campo: Correo Electrónico -->
+                        <div class="col">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" value="megazetap@gmail.com" disabled="" required>
+                            <div class="valid-feedback">
+                                Correo Electrónico ingresado correctamente
+                            </div>
+                            <div class="invalid-feedback">
+                                Porfavor ingresa tu correo electrónico
+                            </div>
+                        </div>
+                    </li>
+                    <br/>
+                    <li*>
+                        <!-- Quinto Campo: Acudientes -->
+                        <div class="col">
+                            <label for="acudientes" class="form-label">Acudientes</label>
+                            <input type="text" class="form-control" id="acudientes" value="Ninguno" disabled="" required>
+                            <div class="valid-feedback">
+                                ingresado correctamente
+                            </div>
+                            <div class="invalid-feedback">
+                                Ingrese correctamente el dato
+                            </div>
+                        </div>
+                    </li>
+                    <br/>
+                    <li*>
+                        <!-- Sexto Campo : Fecha de nacimiento -->
+                        <div class="col">
+                            <label for="nacimiento" class="form-label">Fecha de nacimiento</label>
+                            <input type="date" class="form-control" id="nacimiento" value="" disabled="" required>
+                            
+                            <div class="valid-feedback">
+                                ingresado correctamente
+                            </div>
+                            <div class="invalid-feedback">
+                                Ingrese correctamente el dato
+                            </div>
+                        </div>
+                    </li>
+                    <br/>
+                    <li*>
+                        <!-- Séptimo Campo : Región -->
+                        <div class="col">
+                            <label for="region" class="form-label" disabled="" required>Región</label>
+                            <div class="region">
+                                <select name="region">
+                                    <option value="1">Valparaíso</option> 
+                                    <option value="2">Santiago</option> 
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    <br/>
+                    <li*>
+                        <!-- Octavo Campo : Comuna - En base a la región -->
+                        <div class="col">
+                            <label for="comuna" class="form-label " disabled="" required>Región</label>
+                            <div class="region">
+                                <select name="comuna">
+                                    <option selected value="1"> Elige la comuna donde vives </option>
+                                        <optgroup label="Valparaíso"> 
+                                        <option value="1">Valparaíso</option> 
+                                        <option value="2">Viña del Mar</option> 
+                                        <option value="3">Quilpue</option> 
+                                        <option value="4">Villa Alemana</option>
+                                        <option value="5">Limache</option>
+                                    </optgroup> 
+                                    <optgroup label="Santiago"> 
+                                        <option value="1">Conchalí</option> 
+                                        <option value="2">Huechuraba</option> 
+                                        <option value="3">Independencia</option> 
+                                        <option value="4">Quilicura</option> 
+                                        <option value="5">Recoleta</option> 
+                                        <option value="6">Renca</option> 
+                                        <option value="7">Las Condes</option> 
+                                    </optgroup> 
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    <br/>
+                    <li*>
+                        <!-- Noveno campo : Dirección -->
+                        <div class="col">
+                            <label for="direccion" class="form-label">Dirección</label>
+                            <input type="text" class="form-control" id="direccion" value="Casa x numero 1584" disabled="" required>
+                            <div class="valid-feedback">
+                                Dirección ingresada correctamente
+                            </div>
+                            <div class="invalid-feedback">
+                                Porfavor ingrese su dirección
+                            </div>
+                        </div>
+                    </li>
+                    <br/>
+                    <button type="submit" disabled="" id="botonactualizar">Actualizar</button>
+                    
+                </ul>
+            </form>
+        </div>
+
+
+
+    
+
+
+
+
+
+        <script> var exports={};</script>
+        <script src="js/inicio.js" async></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    </body>
+</html>
