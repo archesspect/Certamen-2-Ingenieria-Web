@@ -20,4 +20,18 @@ td {
   margin-bottom: 15px;
 }
 
+#cajahidden {
+  padding-top: 2rem;
+  border: black 8px;
+}
+
+#contenedor2 {
+  padding-top: 18rem;
+  padding-right: 1rem;
+}
+
+#botoncrear {
+  padding-top: 1rem;
+}
+
 /*# sourceMappingURL=estilo.css.map */

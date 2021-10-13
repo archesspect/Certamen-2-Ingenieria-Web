@@ -88,7 +88,10 @@ function desbloquear(){
 }
 
 function agregarcampo(){
-
+    (<HTMLInputElement> document.getElementById("asignatura")).hidden = false;
+    (<HTMLInputElement> document.getElementById("objetivos")).hidden = false;
+    (<HTMLInputElement> document.getElementById("nota")).hidden = false;
+    (<HTMLInputElement> document.getElementById("crear")).hidden = false;
 }
 
 

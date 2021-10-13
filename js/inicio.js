@@ -93,4 +93,8 @@ function desbloquear() {
     document.getElementById("actualizar").hidden = false;
 }
 function agregarcampo() {
+    document.getElementById("asignatura").hidden = false;
+    document.getElementById("objetivos").hidden = false;
+    document.getElementById("nota").hidden = false;
+    document.getElementById("crear").hidden = false;
 }

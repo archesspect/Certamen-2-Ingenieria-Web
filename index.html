@@ -137,10 +137,8 @@
     
                 </form>
             
-                <div class="caja col-6" >
-                    <h1>CONTENIDO 2</h1>
-                    <button class="btnmostrar">
-                        <i class="far fa-plus-square"></i>
+                <div class="caja col-6" id="contenedor2" >
+                    <button class="btnmostrar" onclick="agregarcampo()" >+
                     </button>
                     <table class="tablaramos">
                         <tr>
@@ -168,17 +166,22 @@
                             <td></td>
                         </tr>
                     </table>
-                    <form class="caja col-6">
-                        <div class="col">
-                            <input type="text" class="form-control" id="asignatura" value=""  placeholder="Asignatura" required>
-                        </div>
-                        <div class="col">
-                            <input type="text" class="form-control" id="objetivos" value=""  placeholder="Objetivos" required>
-                        </div>
-                        <div class="col">
-                            <input type="text" class="form-control" id="nota" value=""  placeholder="Nota" required>
-                        </div>
-                    </form>
+                    <div class="contenedor" id="formularioramo">
+                        <form class="caja row" id="cajahidden">
+                            <div class="col-4">
+                                <input type="text" class="form-control" id="asignatura" value="" Hidden placeholder="Asignatura" required>
+                            </div>
+                            <div class="col-4">
+                                <input type="text" class="form-control" id="objetivos" value=""  Hidden placeholder="Objetivos" required>
+                            </div>
+                            <div class="col-4">
+                                <input type="text" class="form-control" id="nota" value="" Hidden placeholder="Nota" required>
+                            </div>
+                            <div class="crear" id="botoncrear">
+                                <button id="crear" Hidden >Crear</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
