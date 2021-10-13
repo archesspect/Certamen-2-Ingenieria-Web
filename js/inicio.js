@@ -66,17 +66,46 @@ var form = document.getElementById("1");
 form.addEventListener('submit', function (event) { event.preventDefault(); submitForm(); });
 function submitForm() {
     var rut = document.getElementById("rut").value;
-    ValidarRut(rut);
-}
-var campos = [{
-        "id": "",
-        "rut": "",
-        "telefono": "",
-        "email": "",
-        "acudientes": "",
-        "direccion": ""
+    if (!ValidarRut(rut)) {
+        window.alert("Rut invÃ¡lido");
+        return;
     }
-];
+    else {
+        var telefono = document.getElementById("telefono").value;
+        var email = document.getElementById("email").value;
+        var acudientes = document.getElementById("acudientes").value;
+        var direccion = document.getElementById("direccion").value;
+        var nacimiento = document.getElementById("nacimiento").value;
+        var region_1 = document.getElementById("region").value;
+        var comuna_1 = document.getElementById("comuna").value;
+        var ficha = {
+            rut: rut,
+            telefono: telefono,
+            email: email,
+            acudientes: acudientes,
+            direccion: direccion,
+            nacimiento: nacimiento,
+            region: region_1,
+            comuna: comuna_1,
+        };
+        console.log(ficha);
+        document.getElementById("rutinicial").hidden = false;
+        document.getElementById("rutinicial").textContent = rut;
+        document.getElementById("rut").hidden = true;
+        document.getElementById("telefonoinicial").hidden = false;
+        document.getElementById("telefonoinicial").textContent = telefono;
+        document.getElementById("telefono").hidden = true;
+        document.getElementById("emailinicial").hidden = false;
+        document.getElementById("emailinicial").textContent = email;
+        document.getElementById("email").hidden = true;
+        document.getElementById("acudientesinicial").hidden = false;
+        document.getElementById("acudientesinicial").textContent = acudientes;
+        document.getElementById("acudientes").hidden = true;
+        document.getElementById("direccioninicial").hidden = false;
+        document.getElementById("direccioninicial").textContent = direccion;
+        document.getElementById("direccion").hidden = true;
+    }
+}
 function desbloquear() {
     document.getElementById("botondesbloqueo").hidden = false;
     document.getElementById("rut").hidden = false;

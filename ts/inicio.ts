@@ -51,25 +51,47 @@ form.addEventListener('submit', (event:any) => {event.preventDefault(); submitFo
 
 function submitForm(){
     let rut:any = (<HTMLInputElement> document.getElementById("rut")).value;
-    ValidarRut(rut);
-    
-}
+    if (!ValidarRut(rut)) {
+        window.alert("Rut invÃ¡lido");
+        return;
+    } else {
+        let telefono:any = (<HTMLInputElement> document.getElementById("telefono")).value;
+        let email:any = (<HTMLInputElement> document.getElementById("email")).value;
+        let acudientes:any = (<HTMLInputElement> document.getElementById("acudientes")).value;
+        let direccion:any = (<HTMLInputElement> document.getElementById("direccion")).value;
+        let nacimiento:any = (<HTMLInputElement> document.getElementById("nacimiento")).value;
+        let region:any = (<HTMLInputElement> document.getElementById("region")).value;
+        let comuna:any = (<HTMLInputElement> document.getElementById("comuna")).value;
 
-let campos=[{
-    "id": "",
-    "rut":"",
-    "telefono":"",
-    "email":"",
-    "acudientes":"",
-    "direccion":""
+        let ficha:any = {
+            rut,
+            telefono,
+            email,
+            acudientes,
+            direccion,
+            nacimiento,
+            region,
+            comuna,
+        };
+        console.log(ficha);  
+
+        (<HTMLInputElement> document.getElementById("rutinicial")).hidden = false;
+        (<HTMLInputElement> document.getElementById("rutinicial")).textContent = rut;
+        (<HTMLInputElement> document.getElementById("rut")).hidden = true;
+        (<HTMLInputElement> document.getElementById("telefonoinicial")).hidden = false;
+        (<HTMLInputElement> document.getElementById("telefonoinicial")).textContent = telefono;
+        (<HTMLInputElement> document.getElementById("telefono")).hidden = true;
+        (<HTMLInputElement> document.getElementById("emailinicial")).hidden = false;
+        (<HTMLInputElement> document.getElementById("emailinicial")).textContent = email;
+        (<HTMLInputElement> document.getElementById("email")).hidden = true;
+        (<HTMLInputElement> document.getElementById("acudientesinicial")).hidden = false;
+        (<HTMLInputElement> document.getElementById("acudientesinicial")).textContent = acudientes;
+        (<HTMLInputElement> document.getElementById("acudientes")).hidden = true;
+        (<HTMLInputElement> document.getElementById("direccioninicial")).hidden = false;
+        (<HTMLInputElement> document.getElementById("direccioninicial")).textContent = direccion;
+        (<HTMLInputElement> document.getElementById("direccion")).hidden = true;
     }
-]
-
-
-
-
-
-
+}
 
 function desbloquear(){
     (<HTMLInputElement> document.getElementById("botondesbloqueo")).hidden = false;
