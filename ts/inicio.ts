@@ -41,7 +41,6 @@ function ValidarRut(valor:any){
         return true
     }else{
         console.log("false")
-        window.alert("Rut inválido")
         return false
     }
 }

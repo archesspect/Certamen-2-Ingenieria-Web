@@ -59,7 +59,6 @@ function ValidarRut(valor) {
     }
     else {
         console.log("false");
-        window.alert("Rut inválido");
         return false;
     }
 }
