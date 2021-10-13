@@ -18,7 +18,7 @@
     <body>
         <div class="contenido">
             <div class="row">
-                <form class="caja col-6" onsubmit="enviar()">
+                <form class="caja col-6" id="1">
                     <h1>Ficha del Estudiante</h1>
                     <P>Germán Tabilo
                         <button id="botondesbloqueo" onclick="desbloquear()">Editar</button>
@@ -58,7 +58,7 @@
                             <!-- Cuarto Campo: Correo Electrónico -->
                             <div class="col">
                                 <label for="email" class="form-label">Correo Electrónico</label>
-                                <input type="email" class="form-control" id="email" value="" hidden required><span id="emailinicial">985636503</span>
+                                <input type="email" class="form-control" id="email" value="" hidden required><span id="emailinicial">example@gmail.com</span>
                                 <div class="valid-feedback">
                                     Correo Electrónico ingresado correctamente
                                 </div>
@@ -72,7 +72,7 @@
                             <!-- Quinto Campo: Acudientes -->
                             <div class="col">
                                 <label for="acudientes" class="form-label">Acudientes</label>
-                                <input type="text" class="form-control" id="acudientes" value="" hidden required><span id="acudientesinicial">985636503</span>
+                                <input type="text" class="form-control" id="acudientes" value="" hidden required><span id="acudientesinicial">Ninguno</span>
                                 <div class="valid-feedback">
                                     ingresado correctamente
                                 </div>
@@ -132,7 +132,7 @@
                     </li*>
                     <br>
                     <li*>
-                        <button class="btn btn-primary" id="actualizar" type="submit" hidden>Actualizar</button>
+                        <button class="btn btn-primary" type="submit" id="actualizar" hidden>Actualizar</button>
                     </li*>
     
                 </form>
@@ -168,6 +168,17 @@
                             <td></td>
                         </tr>
                     </table>
+                    <form class="caja col-6">
+                        <div class="col">
+                            <input type="text" class="form-control" id="asignatura" value=""  placeholder="Asignatura" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" id="objetivos" value=""  placeholder="Objetivos" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" id="nota" value=""  placeholder="Nota" required>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

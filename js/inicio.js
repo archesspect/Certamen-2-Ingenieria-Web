@@ -52,12 +52,23 @@ function ValidarRut(valor) {
     for (; rut; rut = Math.floor(rut / 10))
         S = (S + rut % 10 * (9 - M++ % 6)) % 11;
     console.log(S ? S - 1 : 'k');
-    return S ? S - 1 : 'k';
+    var verificador = S ? S - 1 : 'k';
+    if (verificador == tmp[1]) {
+        console.log("true");
+        return true;
+    }
+    else {
+        console.log("false");
+        window.alert("Rut inválido");
+        return false;
+    }
 }
-// function enviar(e:any){
-//     e.preventDefault();
-//     console.log("hola mundo")
-// }
+var form = document.getElementById("1");
+form.addEventListener('submit', function (event) { event.preventDefault(); submitForm(); });
+function submitForm() {
+    var rut = document.getElementById("rut").value;
+    ValidarRut(rut);
+}
 var campos = [{
         "id": "",
         "rut": "",
@@ -67,11 +78,6 @@ var campos = [{
         "direccion": ""
     }
 ];
-// form.addEventListener('submit', (event:any) => {event.preventDefault(); this.submitForm()});
-// elementFirst.innerHTML = 'email: ' + document.getElementById('loginForm')[0].value;
-// document.getElementById('loginForm').appendChild(elementFirst);
-// elementSecond.innerHTML = 'password: ' + document.getElementById('loginForm')[1].value;
-// document.getElementById('loginForm').appendChild(elementSecond);
 function desbloquear() {
     document.getElementById("botondesbloqueo").hidden = false;
     document.getElementById("rut").hidden = false;
@@ -85,4 +91,6 @@ function desbloquear() {
     document.getElementById("direccion").hidden = false;
     document.getElementById("direccioninicial").hidden = true;
     document.getElementById("actualizar").hidden = false;
+}
+function agregarcampo() {
 }
