@@ -1,7 +1,23 @@
-ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.contenido {
+  margin: 0px;
+  padding: 0;
+}
+
+td {
+  padding-right: 1.5rem;
+}
+
+.caja:nth-child(1) h1 {
+  text-align: center;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.caja:nth-child(2) h1 {
+  background: #069;
+  text-align: center;
+  color: white;
+  margin-bottom: 15px;
 }
 
 /*# sourceMappingURL=estilo.css.map */
